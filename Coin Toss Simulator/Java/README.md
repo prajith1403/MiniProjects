@@ -5,6 +5,7 @@ Often you can just list the file that contains main in the compile command and j
 When you are compiling and running your test program you should be able to do it as follows:
 
 *javac CoinTossSimulator\*.java*
+
 *java CoinTossSimulatorTester*
 
 The wild-card in the compile command will match the two files *CoinTossSimulatorTester.java* and *CoinTossSimulator.java*.
@@ -12,6 +13,7 @@ The wild-card in the compile command will match the two files *CoinTossSimulator
 For the larger program (for that one main that is in *CoinSimViewer.java*), you can either list all of the files it uses on the command line; but the following is a convenient shorthand:
 
 *javac @CoinSimViewer.list*
+
 *java CoinSimViewer*
 
 The *CoinSimViewer.list* file just consists of the list of files to compile for the program. The @ on the command line tells java to look in the file that follows it find out what java files to compile. An alternate is to use \*.java instead in the compile command, although that one would also attempt to compile *CoinTossSimulatorTester.java*.
