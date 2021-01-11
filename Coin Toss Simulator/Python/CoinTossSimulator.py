@@ -5,9 +5,6 @@ class CoinTossSimulator:
     __HEADS = 0
     __TAILS = 1
 
-    __firstCoinToss = None
-    __secondCoinToss = None
-
     def __init__(self):
         self.__trialCount = 0
         self.__twoHeads = 0
@@ -16,8 +13,8 @@ class CoinTossSimulator:
 
     def run(self, numTrials: int):
         for i in range(numTrials):
-            self.__firstCoinToss = random.uniform(0, 1)
-            self.__secondCoinToss = random.uniform(0, 1)
+            self.__firstCoinToss = random.randint(0, 1)
+            self.__secondCoinToss = random.randint(0, 1)
             if self.__firstCoinToss == self.__HEADS and self.__secondCoinToss == self.__HEADS:
                 self.__twoHeads += 1
             elif self.__firstCoinToss == self.__TAILS and self.__secondCoinToss == self.__TAILS:
